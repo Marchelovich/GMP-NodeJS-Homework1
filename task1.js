@@ -6,8 +6,7 @@ function reverseString(str) {
     return newString;
 }
 
-console.log('Enter your text:');
 process.stdin.on('data', chunk => {
-    const str = chunk.toString();
+    const str = chunk.toString().trimEnd();
     console.log(reverseString(str));
 });
